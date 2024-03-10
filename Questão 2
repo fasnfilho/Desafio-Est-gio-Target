@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int a = 0, b = 1, aux;
+    int n;
+    printf("Digite o número a ser analisado: ");
+    scanf("%d", &n);
+    while(n >= a && n >= b){
+        aux = b;
+        b = a + b;
+        a = aux;
+    }
+    if(n == a || n == b){
+        printf("Esse numero pertence a sequencia de Fibonacci!");
+    }
+    else{
+        printf("Esse numero não pertence a sequencia de Fibonacci!");
+    }
+    
+  return(0);
+}
